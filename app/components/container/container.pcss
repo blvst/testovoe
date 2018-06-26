@@ -1,0 +1,40 @@
+@import '../../styles/helpers/variables.pcss';
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  &--fluid {
+    max-width: 100%;
+    padding: 0 60px;
+  }
+
+  &--condensed {
+    max-width: 960px;
+    box-sizing: border-box;
+    padding: 0 61px;
+  }
+}
+
+@media all and (max-width: $mediaMiddleSize) {
+  .container,
+  .container--fluid {
+    max-width: 964px;
+    padding: 0;
+  }
+
+  .container--condensed {
+    width: 622px;
+  }
+}
+
+@media all and (max-width: $mediaSmallSize) {
+  .container,
+  .container--fluid,
+  .container--condensed {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}

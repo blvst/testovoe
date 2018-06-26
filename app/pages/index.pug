@@ -1,0 +1,21 @@
+extends ../components/layout/default
+
+include ../components/first/first
+include ../components/stat/stat
+include ../components/offer/offer
+include ../components/conditions/conditions
+include ../components/callback/callback
+include ../components/footer/footer
+include ../components/modal/modal
+
+block head
+  - var pageTitle = 'Project Template';
+
+block content
+  +first
+  +stat
+  +offer
+  +conditions
+  +callback
+  +footer
+  +modal

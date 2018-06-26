@@ -1,0 +1,46 @@
+@import '../../styles/helpers/variables.pcss';
+
+.statistics {
+  padding: 135px 0 137px;
+
+  @media all and (max-width: $mediaMiddleSize) {
+    padding: 76px 0 84px;
+  }
+
+  @media all and (max-width: $mediaSmallSize) {
+    padding: 12px 0 0;
+  }
+
+  &__row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 0 54px 0 62px;
+
+    @media all and (max-width: $mediaMiddleSize) {
+      padding: 0;
+      margin: 0 -5px;
+    }
+
+    @media all and (max-width: $mediaSmallSize) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__col {
+    width: 245px;
+
+    @media all and (max-width: $mediaMiddleSize) {
+      width: 215px;
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    @media all and (max-width: $mediaSmallSize) {
+      width: calc(50% - 10px);
+      margin: 15px 5px;
+    }
+  }
+}

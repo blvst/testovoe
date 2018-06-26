@@ -1,0 +1,22 @@
+include ../container/container
+include ../heading/heading
+include ../number/number
+
+mixin conditions()
+  .conditions
+    +container
+      +heading('white')
+        | условия франшизы
+      .conditions__row
+        .conditions__col
+          +number(500, '&nbsp;тыс. руб.', 'white')
+            | вступительный взнос
+
+        .conditions__col
+          +number(6, '%', 'white')
+            | роялти в 1-ый год (первые 2 месяца
+            | с&nbsp;открытия, мораторий на выплату роялти)
+
+        .conditions__col
+          +number(8, '%', 'white')
+            | роялти со 2-го года

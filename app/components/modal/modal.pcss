@@ -1,0 +1,88 @@
+@import '../../styles/helpers/variables.pcss';
+
+.modal {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateZ(0);
+  transition: visibility 0s linear 300ms, opacity 300ms;
+
+  &__container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    position: relative;
+    background-color: #fff;
+    width: 420px;
+    padding: 40px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transform: translateY(-50%);
+    opacity: 0;
+    transition: all 200ms ease-out;
+
+    @media all and (max-width: $mediaSmallSize) {
+      width: 320px;
+      padding: 20px;
+    }
+  }
+
+  &__header {
+    font-size: 3.2rem;
+    font-weight: 800;
+    display: block;
+
+    @media all and (max-width: $mediaSmallSize) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &__text {
+    margin: 20px 0;
+    font-size: 2.2rem;
+    color: rgba(0, 0, 0, 0.4);
+
+    @media all and (max-width: $mediaSmallSize) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: opacity 280ms ease-out;
+
+    @media all and (max-width: $mediaSmallSize) {
+      right: 10px;
+      top: 10px;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &--showed {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0ms, opacity 300ms;
+  }
+
+  &--showed &__content {
+    transform: none;
+    opacity: 1;
+  }
+}

@@ -1,0 +1,52 @@
+@import '../../styles/helpers/variables.pcss';
+
+.first {
+  background-color: #505050;
+  padding: 60px 0 65px;
+
+  @media all and (max-width: $mediaMiddleSize) {
+    padding: 29px 0 38px;
+  }
+
+  @media all and (max-width: $mediaSmallSize) {
+    padding: 0 0 29px;
+    background: linear-gradient(to top, #000 0%, #000 50%, #505050 65%, #505050 100%);
+  }
+
+  &__menu-container {
+    padding-bottom: 515px;
+    position: relative;
+
+    @media all and (max-width: $mediaMiddleSize) {
+      padding-bottom: 405px;
+    }
+
+    @media all and (max-width: $mediaSmallSize) {
+      padding-bottom: 355px;
+    }
+  }
+
+  &__description {
+    max-width: 840px;
+    margin: 20px 0 0;
+    font-size: 2.2rem;
+    line-height: 1.82;
+    letter-spacing: 0.01rem;
+    color: #fff;
+
+    @media all and (max-width: $mediaMiddleSize) {
+      font-size: 2rem;
+      line-height: 1.78;
+      letter-spacing: 0.005rem;
+    }
+
+    @media all and (max-width: $mediaSmallSize) {
+      width: 840px;
+      max-width: 97%;
+      margin-top: 21px;
+      font-size: 1.8rem;
+      line-height: 1.7;
+      letter-spacing: 0.005rem;
+    }
+  }
+}

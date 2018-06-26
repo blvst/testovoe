@@ -1,0 +1,6 @@
+mixin heading(color, align)
+  - var colorModifier = color ? `heading--${color}` : ''
+  - var alignModifier = align ? `heading--${align}` : ''
+  div(class=`heading ${colorModifier} ${alignModifier}`)&attributes(attributes)
+    .heading__text
+      block

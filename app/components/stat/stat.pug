@@ -1,0 +1,22 @@
+include ../container/container
+include ../number/number
+
+mixin stat()
+  .statistics
+    +container
+      .statistics__row
+        .statistics__col
+          +number(2014)
+            | год основания компании
+
+        .statistics__col
+          +number(2016)
+            | год запуска франчайзинга
+
+        .statistics__col
+          +number(1)
+            | франшизных предприятий
+
+        .statistics__col
+          +number(5)
+            | собственных предприятий

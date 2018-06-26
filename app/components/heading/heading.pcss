@@ -1,0 +1,52 @@
+@import '../../styles/helpers/variables.pcss';
+
+.heading {
+  display: block;
+  font-weight: 800;
+  font-size: 4rem;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 0.56rem;
+
+  @media all and (max-width: $mediaMiddleSize) {
+    font-size: 3.2rem;
+    letter-spacing: 0.45rem;
+  }
+
+  @media all and (max-width: $mediaSmallSize) {
+    font-size: 2.5rem;
+    letter-spacing: 0.35rem;
+    text-align: left;
+  }
+
+  &__text {
+    display: inline-block;
+    padding: 15px 21px 5px 29px;
+    background-color: #000;
+    line-height: 1.5;
+
+    @media all and (max-width: $mediaMiddleSize) {
+      padding: 14px 17px 4px 24px;
+    }
+
+    @media all and (max-width: $mediaSmallSize) {
+      display: inline;
+      padding: 10px 10px 5px 14px;
+      line-height: 1;
+      box-decoration-break: clone;
+    }
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--white {
+    color: #000;
+  }
+
+  &--white &__text {
+    background-color: #fff;
+  }
+}

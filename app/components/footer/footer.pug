@@ -1,0 +1,51 @@
+include ../container/container
+include ../icon/icon
+
+mixin footer()
+  .footer
+    +container
+      .footer__row
+        .footer__item.footer__contact
+          a(href='#', data-href='88007777777').footer__link.footer__contact-link
+            +icon('phone')(width='20px', height='20px').footer__contact-link-icon
+            span.footer__contact-link-text 8 800 777-77-77
+
+        .footer__item.footer__contact
+          a(href='mailto:info@rest.ru').footer__link.footer__contact-link
+            +icon('mail')(width='22px', height='17px').footer__contact-link-icon
+            span.footer__contact-link-text info@rest.ru
+
+      .footer__row.footer__menu
+        each item in ['Рестораны', 'Что в меню', 'Акции и события', 'О нас', 'Франшиза', 'Контакты']
+          .footer__item
+            a(href='#').footer__link
+              = item
+
+
+      .footer__row.footer__social
+          .footer__item.footer__icons
+            a(href='#').footer__link
+              +icon('vk')(width='31px', height='18px').footer__icons-src.footer__icons-src--vk
+
+          .footer__item.footer__icons
+            a(href='#').footer__link
+              +icon('facebook')(width='14px', height='25px').footer__icons-src.footer__icons-src--facebook
+
+          .footer__item.footer__icons
+            a(href='#').footer__link
+              +icon('youtube')(width='36px', height='23px').footer__icons-src.footer__icons-src--youtube
+
+          .footer__item.footer__icons
+            a(href='#').footer__link
+              +icon('instagram')(width='31px', height='30px').footer__icons-src.footer__icons-src--instagram
+
+          .footer__item.footer__icons
+            a(href='#').footer__link
+              +icon('tripadvisor')(width='42px', height='25px').footer__icons-src.footer__icons-src--tripadvisor
+
+
+      .footer__row.footer__confidentiality-row
+        a(href='#').footer__confidentiality
+          | Политика конфиденциальности
+
+

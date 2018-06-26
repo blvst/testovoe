@@ -1,0 +1,125 @@
+@import '../../styles/helpers/variables.pcss';
+
+.menu {
+  position: fixed;
+  display: inline-block;
+  z-index: 10;
+
+  @media all and (max-width: $mediaSmallSize) {
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .menu__hidden {
+    width: 100%;
+    height: 400px;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    z-index: 2;
+    background-color: #000;
+    transition: visibility 0s linear 300ms, opacity 300ms, transform 300ms;
+  }
+
+  .menu__visible {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  &__burger {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 5px;
+    padding: 0 27px;
+    background-color: #000;
+    cursor: pointer;
+    z-index: 4;
+    overflow: hidden;
+
+    @media all and (max-width: $mediaMiddleSize) {
+      margin-right: 4px;
+    }
+
+    @media all and (max-width: $mediaSmallSize) {
+      margin-right: 0;
+      padding: 0 11px;
+    }
+  }
+
+  &__burger-line {
+    display: block;
+    width: 37px;
+    height: 3px;
+    margin-bottom: 7px;
+    background-color: #fff;
+    transition: all 280ms ease-out;
+    opacity: 1;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media all and (max-width: $mediaMiddleSize) {
+      width: 36px;
+    }
+
+    @media all and (max-width: $mediaSmallSize) {
+      width: 24px;
+      height: 1px;
+      margin-bottom: 6px;
+    }
+  }
+
+  &__heading {
+    letter-spacing: 0.83rem;
+
+    @media all and (max-width: $mediaMiddleSize) {
+      letter-spacing: 0.65rem;
+    }
+
+    @media all and (max-width: $mediaSmallSize) {
+      width: 100%;
+      font-size: 1.6rem;
+      letter-spacing: 0.32rem;
+
+      .heading__text {
+        display: block;
+        padding: 17px 17px 11px 12px;
+      }
+    }
+  }
+
+  &--opened &__hidden {
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    transition: visibility 0s linear 0s, opacity 300ms, transform 300ms;
+  }
+
+  &--opened &__burger-line:first-child {
+    transform: rotate(43deg) translate(-3px, -3px);
+    transform-origin: top left;
+
+    @media all and (max-width: $mediaSmallSize) {
+      transform: rotate(43deg) translate(-2px, -1px);
+    }
+  }
+
+  &--opened &__burger-line:nth-child(2) {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  &--opened &__burger-line:last-child {
+    transform: rotate(-43deg);
+    transform-origin: bottom left;
+  }
+}

@@ -1,0 +1,12 @@
+include ../icon/icon
+
+mixin modal()
+  .modal
+    .modal__container
+      .modal__content
+        .modal__close
+          +icon('close')(width='16px', height='16px').modal__close-src
+        b.modal__header
+          | Благодарим за вашу заявку!
+        p.modal__text
+          | Наш менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время

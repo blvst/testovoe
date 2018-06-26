@@ -1,0 +1,34 @@
+include ../container/container
+include ../heading/heading
+include ../numbered_list/numbered_list
+include ../icon/icon
+
+mixin offer()
+  .offer
+    +container('condensed')
+      +heading(false, 'left').offer__heading что мы предлагаем
+      +numbered_list([
+        'Передача оптимизированных бизнес-процессов',
+        'Приезд на открытие стартап‑команды франчайзи',
+        'Программа обучения и тренинги для персонала',
+        'Оперативная поддержка и консультации',
+        'Топ-менеджмент на базе флагманского ресторана',
+        'Маркетинговая концепция с учётом вашей геолокации',
+        'Внедрение в общую SMM‑компанию',
+        'Актуальные меню, карты бара и макеты полиграфических материалов',
+        'Обновление фоновой музыки и видеоряда'
+      ]).offer__list
+
+      .offer__links
+        a.offer__link(href='#')
+          span.offer__link-text
+            | посмотреть полное описание на beboss.ru
+          span.offer__link-image
+            +icon('arrow')(width='30px', height='15px').offer__link-image-src
+
+        a.offer__link(href='#')
+          span.offer__link-text
+            | скачать презентацию (pdf,&nbsp;1.2 МБ)
+          span.offer__link-image
+            +icon('arrow')(width='30px', height='15px').offer__link-image-src
+

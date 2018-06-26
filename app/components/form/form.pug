@@ -1,0 +1,29 @@
+include ../input/input
+
+mixin form()
+  form(action='#', method='post').form
+    .form__row
+      .form__col.form__col--name
+        +input(name='name', placeholder='Ваше имя')
+
+      .form__col.form__col--phone
+        +input(name='phone', placeholder='Контактный телефон')
+
+      .form__col.form__col--email
+        +input(name='email', type='email', placeholder='Электронная почта')
+
+      .form__col
+        +input(name='city', placeholder='Город открытия')
+
+      .form__col.form__col--full
+        +input(name='message', placeholder='Сообщение')
+      .form__col.form__captcha
+        input(name='captcha', type='checkbox', required='').form__captcha-checkbox
+        .form__captcha-src#captcha
+      .form__col.form__action
+        button(type='submit').form__submit
+          | отправить заявку
+        p.form__notice
+          | Нажимая кнопку “Отправить заявку”, вы&nbsp;даёте
+          | согласие на обработку своих персональных
+          | данных

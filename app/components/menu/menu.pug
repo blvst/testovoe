@@ -1,0 +1,11 @@
+include ../heading/heading
+
+mixin menu()
+  .menu&attributes(attributes)
+    .menu__hidden
+    .menu__visible
+      .menu__burger
+        each val in [1, 2, 3]
+          i.menu__burger-line
+      +heading(false, 'left').menu__heading
+        | Франшиза

@@ -1,0 +1,8 @@
+doctype html
+html(lang='ru')
+  include ../head/head
+  block content
+
+  script(src='assets/bundle.js')
+  if process.env.NODE_ENV !== 'production'
+    script(src='/browser-sync/browser-sync-client.js?v=2.24.4')

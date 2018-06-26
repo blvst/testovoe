@@ -1,0 +1,8 @@
+mixin numbered_list(list)
+  ul.numbered-list&attributes(attributes)
+    each item, index in list
+      li.numbered-list__item
+        span.numbered-list__item-number
+          = index+1
+        span.numbered-list__item-desc
+          = item

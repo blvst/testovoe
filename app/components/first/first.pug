@@ -1,0 +1,15 @@
+include ../container/container
+include ../heading/heading
+include ../menu/menu
+
+mixin first()
+  .first
+    +container('fluid').first__container
+      .first__menu-container
+        +menu.first__menu
+      +heading('white', 'left').first__heading
+        | откройте свой ресторан
+      p.first__description
+        | Диониссийское начало, по определению, вызывает самодостаточный эдипов комплекс. Добавлю, что филогенез продолжает персональный эдипов комплекс, что-то подобное можно встретить в работах Ауэрбаха и Тандлера. Этикет, как бы это ни казалось парадоксальным, традиционен.
+
+

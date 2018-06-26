@@ -1,0 +1,5 @@
+mixin container(param)
+  - var modifier = param ? `container--${param}` : '';
+
+  div(class=`container ${modifier}`)
+    block

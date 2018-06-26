@@ -1,0 +1,10 @@
+include ../container/container
+include ../heading/heading
+include ../form/form
+
+mixin callback()
+  .callback
+    +container
+      +heading.callback__heading
+        | открыть свой ресторан
+      +form

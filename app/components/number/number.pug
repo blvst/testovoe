@@ -1,0 +1,14 @@
+mixin number(num, label, color)
+  - var modifier = color ? 'number--white' : '';
+  div(class=`number ${modifier}`)&attributes(attributes)
+    .number__header
+      strong.number__num
+        = num
+      if label
+        span.number__label
+          | !{label}
+
+    span.number__border
+
+    p.number__desc
+      block
